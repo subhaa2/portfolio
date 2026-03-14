@@ -1,0 +1,117 @@
+.edu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.edu-section-title {
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-strong);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.edu-section-title--spaced {
+  margin-top: 28px;
+}
+
+.edu-item {
+  margin-bottom: 24px;
+}
+
+.edu-degree {
+  margin-bottom: 3px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.edu-institution {
+  margin-bottom: 3px;
+  color: var(--accent);
+  font-size: 12.5px;
+  font-weight: 500;
+}
+
+.edu-period {
+  color: var(--ink-faint);
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+}
+
+.coursework-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.course-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 9px 13px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: var(--cream);
+  color: var(--ink-soft);
+  font-size: 12.5px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.course-item:hover {
+  border-color: var(--accent-warm);
+  box-shadow: 0 2px 10px rgba(139, 69, 19, 0.05);
+}
+
+.course-icon {
+  flex-shrink: 0;
+  padding-top: 1px;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 10px;
+}
+
+.course-status {
+  margin-left: 6px;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 9.5px;
+}
+
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.cert-item {
+  padding: 12px 16px;
+  border-left: 2px solid var(--accent);
+  background: var(--cream);
+}
+
+.cert-name {
+  margin-bottom: 2px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.cert-issuer {
+  color: var(--ink-faint);
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 900px) {
+  .edu-grid {
+    grid-template-columns: 1fr;
+  }
+}

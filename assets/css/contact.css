@@ -1,0 +1,128 @@
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+
+.contact-intro {
+  margin-bottom: 36px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.contact-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  transition: padding-right 0.2s;
+}
+
+.contact-item:hover {
+  padding-right: 6px;
+}
+
+.contact-item-static {
+  cursor: default;
+}
+
+.contact-item-static:hover {
+  padding-right: 0;
+}
+
+.contact-label {
+  width: 72px;
+  color: var(--ink-faint);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.contact-value {
+  flex: 1;
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+.contact-arrow {
+  color: var(--ink-faint);
+  font-size: 13px;
+}
+
+.contact-item:hover .contact-arrow {
+  color: var(--accent-warm);
+}
+
+.contact-arrow--muted {
+  opacity: 0.3;
+}
+
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--cream);
+}
+
+.contact-availability {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  color: var(--ink-muted);
+  font-size: 12px;
+}
+
+.availability-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+  animation: pulse-green 2s ease-in-out infinite;
+}
+
+@keyframes pulse-green {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5);
+  }
+
+  50% {
+    box-shadow: 0 0 0 5px rgba(74, 222, 128, 0);
+  }
+}
+
+.contact-quote {
+  margin-bottom: 20px;
+  color: var(--ink-soft);
+  font-family: var(--serif);
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.contact-location {
+  color: var(--ink-faint);
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
