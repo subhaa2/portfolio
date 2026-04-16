@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="716" height="694" viewBox="0 0 716 694" role="img" aria-labelledby="tradeTitle tradeDesc">
+  <title id="tradeTitle">Trade Status Website wireframe</title>
+  <desc id="tradeDesc">A wireframe showing a trade status reporting page with end-of-day and intraday tabs, a date picker, a graph, and a data table.</desc>
+  <rect width="716" height="694" fill="#fbfaf6"/>
+  <rect x="2" y="2" width="712" height="690" fill="none" stroke="#202020" stroke-width="2"/>
+
+  <g fill="none" stroke="#1f1f1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 58H696"/>
+    <path d="M42 96H661"/>
+    <rect x="46" y="122" width="258" height="116"/>
+    <path d="M66 167H193"/>
+    <path d="M66 190H188"/>
+    <path d="M54 279H648"/>
+    <rect x="54" y="303" width="590" height="82"/>
+    <rect x="78" y="320" width="104" height="30"/>
+    <rect x="548" y="352" width="51" height="27"/>
+    <rect x="612" y="352" width="55" height="27"/>
+    <path d="M58 418V505H655"/>
+    <rect x="51" y="513" width="632" height="171"/>
+    <path d="M55 535H679"/>
+    <path d="M189 513V684"/>
+    <path d="M299 513V684"/>
+    <path d="M411 513V684"/>
+    <path d="M508 513V684"/>
+    <path d="M592 513V684"/>
+    <path d="M54 559H680"/>
+    <path d="M54 584H680"/>
+    <path d="M54 609H680"/>
+    <path d="M54 634H680"/>
+    <path d="M54 659H680"/>
+  </g>
+
+  <polyline fill="none" stroke="#2f7fd5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" points="72,493 96,422 114,488 168,488 246,444 342,462 494,494 565,418 584,472 660,438"/>
+
+  <g fill="#1f1f1f" font-family="'Comic Sans MS', 'Trebuchet MS', cursive" font-size="26">
+    <text x="32" y="40">U   D   P</text>
+    <text x="42" y="88">End of Day Report   |   Intraday Report</text>
+    <text x="54" y="155">User Guide:</text>
+    <text x="56" y="296">Select Date :</text>
+    <text x="58" y="408">Graph</text>
+    <text x="73" y="537" font-size="21">Name</text>
+    <text x="195" y="537" font-size="21">Status</text>
+    <text x="309" y="537" font-size="21">Time Created</text>
+    <text x="423" y="537" font-size="21">Exists ?</text>
+    <text x="516" y="537" font-size="20">Extra Info</text>
+    <text x="603" y="537" font-size="20">Enq Info</text>
+    <text x="558" y="371" font-size="18">Reset</text>
+    <text x="622" y="371" font-size="18">Submit</text>
+  </g>
+</svg>

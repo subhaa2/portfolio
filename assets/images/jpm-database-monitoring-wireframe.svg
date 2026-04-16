@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="716" height="582" viewBox="0 0 716 582" role="img" aria-labelledby="dbTitle dbDesc">
+  <title id="dbTitle">Database Monitoring wireframe</title>
+  <desc id="dbDesc">A wireframe showing a database monitoring dashboard with filters, database tables, directory sizes, growth metrics, and process monitoring.</desc>
+  <rect width="716" height="582" fill="#f7f6f3"/>
+  <rect x="2" y="2" width="712" height="578" fill="none" stroke="#202020" stroke-width="2"/>
+
+  <g fill="none" stroke="#1f1f1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="39" width="392" height="92"/>
+    <rect x="30" y="52" width="132" height="28"/>
+    <rect x="276" y="90" width="56" height="24"/>
+    <rect x="346" y="90" width="41" height="24"/>
+    <rect x="391" y="68" width="12" height="18"/>
+    <rect x="391" y="101" width="12" height="18"/>
+
+    <rect x="23" y="166" width="340" height="160"/>
+    <path d="M23 196H363"/>
+    <path d="M108 166V326"/>
+    <path d="M210 166V326"/>
+    <path d="M285 166V326"/>
+    <path d="M23 221H363"/>
+    <path d="M23 256H363"/>
+    <path d="M23 291H363"/>
+
+    <rect x="394" y="177" width="294" height="145"/>
+    <path d="M394 199H688"/>
+    <path d="M547 177V322"/>
+    <path d="M394 235H688"/>
+    <path d="M394 270H688"/>
+    <path d="M394 304H688"/>
+
+    <rect x="17" y="343" width="465" height="167"/>
+    <path d="M17 377H482"/>
+    <path d="M87 343V510"/>
+    <path d="M208 343V510"/>
+    <path d="M355 343V510"/>
+    <path d="M432 343V510"/>
+
+    <rect x="504" y="350" width="221" height="38"/>
+    <rect x="520" y="358" width="67" height="20"/>
+    <rect x="627" y="365" width="40" height="13"/>
+    <rect x="673" y="360" width="25" height="18"/>
+
+    <rect x="24" y="523" width="680" height="26"/>
+  </g>
+
+  <g fill="#1f1f1f" font-family="'Comic Sans MS', 'Trebuchet MS', cursive" font-size="24">
+    <text x="15" y="31">Select Database</text>
+    <text x="40" y="160">Databases</text>
+    <text x="22" y="445">Directory</text>
+    <text x="95" y="445">Total Growth</text>
+    <text x="215" y="445">Avg Rate</text>
+    <text x="366" y="445">Date</text>
+    <text x="440" y="445">Date</text>
+    <text x="517" y="340">Date picker</text>
+    <text x="27" y="547">Processes Name</text>
+    <text x="442" y="197">Directories</text>
+    <text x="596" y="197">Sizes</text>
+  </g>
+
+  <g fill="#1f1f1f" font-family="'Comic Sans MS', 'Trebuchet MS', cursive" font-size="19">
+    <text x="42" y="196">Name</text>
+    <text x="140" y="196">Machine</text>
+    <text x="245" y="196">Host</text>
+    <text x="301" y="196">VM:RAM</text>
+  </g>
+</svg>
