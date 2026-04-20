@@ -95,6 +95,14 @@
   background: #f2eee7;
 }
 
+.project-thumb-media-frame--portrait {
+  padding: 8px;
+}
+
+.project-thumb-media-frame--portrait .project-thumb-media {
+  object-fit: contain;
+}
+
 .project-thumb-media {
   display: block;
   width: 100%;
