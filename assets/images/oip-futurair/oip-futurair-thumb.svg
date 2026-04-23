@@ -1,0 +1,28 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="28" fill="#F4EFE7"/>
+  <rect x="46" y="46" width="1108" height="668" rx="24" fill="#F8F4EE" stroke="#D8CDC0" stroke-width="2"/>
+  <path d="M98 612C190 522 280 468 377 450C487 429 561 447 640 433C732 417 776 354 858 344C948 332 1022 374 1106 454V672H98V612Z" fill="#DDE7F2"/>
+  <path d="M238 641C319 572 382 536 456 528C547 519 615 549 708 539C803 529 865 474 952 464C1018 456 1074 474 1120 517V672H238V641Z" fill="#BFD2E8" opacity="0.9"/>
+  <circle cx="212" cy="208" r="90" fill="#E5EEF8"/>
+  <circle cx="1042" cy="160" r="70" fill="#EDE7DA"/>
+  <rect x="144" y="110" width="912" height="282" rx="28" fill="#1F3F6D"/>
+  <rect x="167" y="133" width="866" height="236" rx="20" fill="#2C568A"/>
+  <text x="600" y="220" text-anchor="middle" fill="#F7F1E7" font-family="'Cormorant Garamond', serif" font-size="78" font-weight="600">FuturAir</text>
+  <text x="600" y="268" text-anchor="middle" fill="#DCE7F3" font-family="'DM Sans', sans-serif" font-size="28" letter-spacing="0.08em">PENTLAND HILLS INTERNATIONAL AIRPORT</text>
+  <text x="600" y="318" text-anchor="middle" fill="#F6EEE1" font-family="'DM Sans', sans-serif" font-size="23">Multidisciplinary OIP proposal across Civil, Mechanical, and Computer Science</text>
+  <rect x="176" y="436" width="242" height="92" rx="18" fill="#F8F4EE" stroke="#D8CDC0" stroke-width="2"/>
+  <rect x="479" y="436" width="242" height="92" rx="18" fill="#F8F4EE" stroke="#D8CDC0" stroke-width="2"/>
+  <rect x="782" y="436" width="242" height="92" rx="18" fill="#F8F4EE" stroke="#D8CDC0" stroke-width="2"/>
+  <text x="297" y="473" text-anchor="middle" fill="#7A624B" font-family="'DM Mono', monospace" font-size="16" letter-spacing="0.18em">01</text>
+  <text x="600" y="473" text-anchor="middle" fill="#7A624B" font-family="'DM Mono', monospace" font-size="16" letter-spacing="0.18em">02</text>
+  <text x="903" y="473" text-anchor="middle" fill="#7A624B" font-family="'DM Mono', monospace" font-size="16" letter-spacing="0.18em">03</text>
+  <text x="297" y="506" text-anchor="middle" fill="#1F2430" font-family="'Cormorant Garamond', serif" font-size="34">Seamless Journey</text>
+  <text x="600" y="506" text-anchor="middle" fill="#1F2430" font-family="'Cormorant Garamond', serif" font-size="34">Sustainable Landmark</text>
+  <text x="903" y="506" text-anchor="middle" fill="#1F2430" font-family="'Cormorant Garamond', serif" font-size="34">Future-Proof Hub</text>
+  <path d="M240 616H960" stroke="#8BA5C5" stroke-width="4" stroke-linecap="round"/>
+  <path d="M520 616H680" stroke="#F6EEE1" stroke-width="14" stroke-linecap="round" stroke-dasharray="18 18"/>
+  <path d="M600 560L566 612H634L600 560Z" fill="#2C568A"/>
+  <circle cx="314" cy="616" r="10" fill="#2C568A"/>
+  <circle cx="886" cy="616" r="10" fill="#2C568A"/>
+  <text x="600" y="704" text-anchor="middle" fill="#7A624B" font-family="'DM Sans', sans-serif" font-size="22">Airport systems research • security cameras • storage architecture • virtual wayfinding • passenger flow analysis</text>
+</svg>

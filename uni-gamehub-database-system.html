@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GameHub Database System | Projects | Subhashini Rajkumar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/project-detail.css">
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">Subhashini Rajkumar</a>
+  <ul class="nav-tabs">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a class="active" href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="page page-standalone">
+  <div class="inner-page">
+    <a class="back-link" href="projects.html#uni-projects">Back to all projects</a>
+    <div class="section-label">University - SIT &times; University of Glasgow</div>
+    <h1 class="section-title">GameHub Database System</h1>
+    <p class="project-kicker">A Year 1, Trimester 3 Database Systems project completed in 2025 by a team of six students, combining MariaDB and MongoDB in a Flask-based web application that centralized game, sales, platform, achievement, and review data for game developers.</p>
+
+    <section class="project-gallery" data-gallery>
+      <div class="gallery-stage">
+        <img
+          class="gallery-stage-image"
+          src="assets/images/db-gamehub/page09_img3.png"
+          alt="Entity relationship diagram for the GameHub project covering games, platforms, languages, genres, companies, sales, and reviews."
+          loading="eager"
+          data-gallery-image
+        >
+      </div>
+      <div class="gallery-meta">
+        <p class="gallery-caption" data-gallery-caption>ERD from the report showing the SQL and NoSQL model split, including join tables for languages, genres, companies, platforms, and sales by region.</p>
+        <div class="gallery-controls">
+          <button class="gallery-control" type="button" data-gallery-prev>Previous</button>
+          <button class="gallery-control" type="button" data-gallery-next>Next</button>
+        </div>
+      </div>
+      <div class="gallery-thumbs" aria-label="GameHub project visuals">
+        <button
+          class="gallery-thumb is-active"
+          type="button"
+          aria-pressed="true"
+          data-gallery-thumb
+          data-src="assets/images/db-gamehub/page09_img3.png"
+          data-alt="Entity relationship diagram for the GameHub project covering games, platforms, languages, genres, companies, sales, and reviews."
+          data-caption="ERD from the report showing the SQL and NoSQL model split, including join tables for languages, genres, companies, platforms, and sales by region."
+        >
+          <img src="assets/images/db-gamehub/page09_img3.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">ERD</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/db-gamehub/page09_img1.png"
+          data-alt="System architecture diagram showing the frontend, backend, MariaDB, and MongoDB layers used in the project."
+          data-caption="System architecture diagram from the report showing the GUI, backend, MariaDB relational storage, and MongoDB document storage."
+        >
+          <img src="assets/images/db-gamehub/page09_img1.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Architecture</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/db-gamehub/page11_img2.png"
+          data-alt="Security function screenshot showing backend access denial for unauthorized users."
+          data-caption="Security-function screenshot from the report showing backend protection against non-admin users attempting CRUD access."
+        >
+          <img src="assets/images/db-gamehub/page11_img2.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Security</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/db-gamehub/page11_img1.png"
+          data-alt="Code snippet for the create achievement flow showing a multi-table SQL query used in the project."
+          data-caption="Appendix code screenshot for the create-achievement flow, including a SQL query that pulls game, developer, and publisher data together."
+        >
+          <img src="assets/images/db-gamehub/page11_img1.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Achievements</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/db-gamehub/page12_img2.png"
+          data-alt="SQL query screenshot for platform and regional sales aggregation used in analytics."
+          data-caption="Appendix code screenshot showing one of the SQL queries used to aggregate platform and regional sales data for analytics."
+        >
+          <img src="assets/images/db-gamehub/page12_img2.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Sales Query</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/db-gamehub/page12_img3.png"
+          data-alt="Code snippet showing the update company route and SQL update logic."
+          data-caption="Appendix code screenshot for the update-company route, including the admin check and SQL update statement."
+        >
+          <img src="assets/images/db-gamehub/page12_img3.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Update Flow</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/db-gamehub/page13_img1.png"
+          data-alt="Code snippet showing the delete company route and SQL delete logic."
+          data-caption="Appendix code screenshot for the delete-company route, showing the admin guard and delete handling."
+        >
+          <img src="assets/images/db-gamehub/page13_img1.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Delete Flow</span>
+        </button>
+      </div>
+    </section>
+
+    <div class="project-note">Team project note: this module was about more than writing isolated queries. The project required us to design a working application around both relational and non-relational data, manage admin/user permissions, and make SQL and NoSQL decisions that actually matched the structure of the datasets we were handling.</div>
+
+    <section class="project-hero">
+      <div class="hero-copy">
+        <p>This project was built for INF2003 Database Systems and was framed as a database application for game developers. The goal was to centralize fragmented information such as game metadata, platform details, regional sales, and player reviews so that developers could study trends and make better design or publishing decisions from one place.</p>
+        <p>The final application used a dual-database setup. MariaDB handled the structured relational side, including games, platforms, companies, genres, languages, achievements, and sales by region. MongoDB handled the less structured review and user-side data, which made sense for document-style review content, recent views, and privilege metadata. The system itself was built around Flask, SQLAlchemy, PyMongo, and JavaScript.</p>
+        <p>Functionally, the project covered admin-controlled CRUD workflows, filtered browsing, game detail and sales pages, review upload and deletion by CSV, recently viewed pages, charts for sales analytics, and a range of advanced features such as AJAX loading, cross-database operations, and backend access control.</p>
+        <div class="badge-row">
+          <span class="detail-badge">Flask</span>
+          <span class="detail-badge">MariaDB</span>
+          <span class="detail-badge">MongoDB</span>
+          <span class="detail-badge">SQLAlchemy</span>
+          <span class="detail-badge">PyMongo</span>
+          <span class="detail-badge">JavaScript</span>
+        </div>
+      </div>
+
+      <div class="project-summary-panel">
+        <div class="summary-card">
+          <div class="summary-label">Period</div>
+          <div class="summary-value">Year 1, Trimester 3</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-label">Module</div>
+          <div class="summary-value">INF2003 Database Systems</div>
+          <div class="summary-copy">University coursework completed in 2025 around application-level database design and integration.</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-label">Team</div>
+          <div class="summary-value">6 students</div>
+          <div class="summary-copy">Developed as a group project with dataset cleaning, schema design, implementation, and reporting shared across the team.</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-label">Application</div>
+          <div class="summary-value">GameHub</div>
+          <div class="summary-copy">A web-based database system that unified gaming data, reviews, and sales information for developer-facing analysis.</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="detail-grid">
+      <section class="detail-section">
+        <h2>Application concept</h2>
+        <ul class="detail-list">
+          <li>Designed the application around the problem of fragmented game market data spread across multiple sources and platforms.</li>
+          <li>Used game profiles, video game sales, and review datasets, scaled down and cleaned for the project environment.</li>
+          <li>Positioned the system as a developer-facing tool for trend analysis, game comparison, and more informed decision-making.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Database design</h2>
+        <ul class="detail-list">
+          <li>Used MariaDB for the normalized relational side covering games, companies, genres, languages, platforms, achievements, and regional sales.</li>
+          <li>Used MongoDB for reviews and user metadata because the data was more variable, document-like, and less suited to a rigid schema.</li>
+          <li>Built many-to-many relationships through join tables such as supported languages, genres in game, game on platform, game developer, game publisher, and sales per region.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Implemented features</h2>
+        <ul class="detail-list">
+          <li>Supported login, signup, logout, and admin privilege enforcement, with backend checks to prevent unauthorized CRUD access.</li>
+          <li>Included game listing and filtering, detailed game pages, achievements, reviews, recently viewed pages, and sales-detail pages with charts.</li>
+          <li>Handled CSV upload for games and reviews, dynamic dropdown behaviour, AJAX-driven data loading, multi-table queries, and cross-database operations.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>My contribution</h2>
+        <ul class="detail-list">
+          <li>Focused primarily on the SQL side, where I worked on creating new gaming platforms and linking them to existing games.</li>
+          <li>Worked with relational tables and SQL queries for data handling rather than treating the feature as only a frontend form flow.</li>
+          <li>Also contributed on the MongoDB side through data-cleaning work so the review data could be formatted and integrated properly.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Technical learning</h2>
+        <ul class="detail-list">
+          <li>The project forced us to think about how SQL and NoSQL fit different data shapes instead of picking one database style by default.</li>
+          <li>It also highlighted the practical difficulty of cleaning datasets, standardizing entries, and keeping consistency across a dual-database architecture.</li>
+          <li>From the report, one of the main tradeoffs was that the local dual-database setup worked for the project scope but did not provide full cross-data transactions or production-grade security.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Tools and concepts</h2>
+        <div class="stack-list">
+          <span class="stack-pill">Flask</span>
+          <span class="stack-pill">MariaDB</span>
+          <span class="stack-pill">MongoDB</span>
+          <span class="stack-pill">SQLAlchemy</span>
+          <span class="stack-pill">PyMongo</span>
+          <span class="stack-pill">JavaScript</span>
+          <span class="stack-pill">AJAX</span>
+          <span class="stack-pill">CSV upload</span>
+          <span class="stack-pill">ERD design</span>
+          <span class="stack-pill">Data cleaning</span>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h2>Project material</h2>
+        <p>The write-up and gallery on this page are based on the submitted progress report and its appendix visuals.</p>
+        <p><a href="assets/docs/gamehub-database-systems-report.pdf" target="_blank" rel="noreferrer">View project report (PDF)</a></p>
+      </section>
+    </div>
+  </div>
+</main>
+
+<script>
+  (function () {
+    const gallery = document.querySelector('[data-gallery]');
+    if (!gallery) return;
+
+    const stageImage = gallery.querySelector('[data-gallery-image]');
+    const caption = gallery.querySelector('[data-gallery-caption]');
+    const thumbnails = Array.from(gallery.querySelectorAll('[data-gallery-thumb]'));
+    const prevButton = gallery.querySelector('[data-gallery-prev]');
+    const nextButton = gallery.querySelector('[data-gallery-next]');
+    let currentIndex = 0;
+
+    function setSlide(index) {
+      currentIndex = (index + thumbnails.length) % thumbnails.length;
+
+      thumbnails.forEach(function (thumb, thumbIndex) {
+        const isActive = thumbIndex === currentIndex;
+        thumb.classList.toggle('is-active', isActive);
+        thumb.setAttribute('aria-pressed', String(isActive));
+      });
+
+      const activeThumb = thumbnails[currentIndex];
+      stageImage.src = activeThumb.dataset.src;
+      stageImage.alt = activeThumb.dataset.alt;
+      if (caption) {
+        caption.textContent = activeThumb.dataset.caption;
+      }
+    }
+
+    thumbnails.forEach(function (thumb, index) {
+      thumb.addEventListener('click', function () {
+        setSlide(index);
+      });
+    });
+
+    prevButton.addEventListener('click', function () {
+      setSlide(currentIndex - 1);
+    });
+
+    nextButton.addEventListener('click', function () {
+      setSlide(currentIndex + 1);
+    });
+  }());
+</script>
+</body>
+</html>
