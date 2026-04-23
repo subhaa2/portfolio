@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autonomous 4-Legged Spider Robot | Projects | Subhashini Rajkumar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/project-detail.css">
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">Subhashini Rajkumar</a>
+  <ul class="nav-tabs">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a class="active" href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="page page-standalone">
+  <div class="inner-page">
+    <a class="back-link" href="projects.html#uni-projects">Back to all projects</a>
+    <div class="section-label">University - SIT &times; University of Glasgow</div>
+    <h1 class="section-title">Autonomous 4-Legged Spider Robot</h1>
+    <p class="project-kicker">A Year 2, Trimester 1 Embedded Systems project from 2025 focused on a semi-autonomous four-legged rescue robot that combined multi-servo locomotion, sensor-driven decision-making, and long-range LoRa communication for navigation in post-disaster environments.</p>
+
+    <section class="project-gallery" data-gallery>
+      <div class="gallery-stage">
+        <img
+          class="gallery-stage-image"
+          src="assets/images/embedded-spider/spider-architecture.png"
+          alt="Overall architecture diagram for the four-legged spider robot showing the computer pico, sensor pico, LoRa links, mmWave radar, heat sensor, microphone, and servo-controlled robot body."
+          loading="eager"
+          data-gallery-image
+        >
+      </div>
+      <div class="gallery-meta">
+        <p class="gallery-caption" data-gallery-caption>Architecture diagram from the project proposal showing the dual-Pico control split, LoRa messaging, and sensor-to-servo flow.</p>
+        <div class="gallery-controls">
+          <button class="gallery-control" type="button" data-gallery-prev>Previous</button>
+          <button class="gallery-control" type="button" data-gallery-next>Next</button>
+        </div>
+      </div>
+      <div class="gallery-thumbs" aria-label="Spider robot project visuals">
+        <button
+          class="gallery-thumb is-active"
+          type="button"
+          aria-pressed="true"
+          data-gallery-thumb
+          data-src="assets/images/embedded-spider/spider-architecture.png"
+          data-alt="Overall architecture diagram for the four-legged spider robot showing the computer pico, sensor pico, LoRa links, mmWave radar, heat sensor, microphone, and servo-controlled robot body."
+          data-caption="Architecture diagram from the project proposal showing the dual-Pico control split, LoRa messaging, and sensor-to-servo flow."
+        >
+          <img src="assets/images/embedded-spider/spider-architecture.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Architecture</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/embedded-spider/spider-servo-state.png"
+          data-alt="Servo state machine for the spider robot showing standby, movement, turning, custom walk, temperature walk, and backtrack states."
+          data-caption="Servo state diagram showing how the robot transitioned across standby, directional movement, turning, custom walk, temperature walk, and backtrack states."
+        >
+          <img src="assets/images/embedded-spider/spider-servo-state.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Servo States</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/embedded-spider/spider-pathfinding-statechart.png"
+          data-alt="Statechart diagram for the spider robot pathfinding and human detection logic."
+          data-caption="High-level navigation and detection statechart showing obstacle handling, planning, maneuvering, and human-verification flow."
+        >
+          <img src="assets/images/embedded-spider/spider-pathfinding-statechart.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Pathfinding</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/embedded-spider/spider-human-confirmation.png"
+          data-alt="Multi-sensor heat and sound survivor confirmation state machine for the spider robot."
+          data-caption="Multi-sensor confirmation flow showing how heat and sound signals were combined before triggering survivor notification through LoRa."
+        >
+          <img src="assets/images/embedded-spider/spider-human-confirmation.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Heat + Sound</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/embedded-spider/spider-object-detection.png"
+          data-alt="Object detection state machine for the spider robot's mmWave radar driver."
+          data-caption="Object-detection state machine showing radar initialization, scanning, classification, obstacle detection, and alert handling."
+        >
+          <img src="assets/images/embedded-spider/spider-object-detection.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Radar Logic</span>
+        </button>
+      </div>
+    </section>
+
+    <div class="project-note">Team project note: the proposal sign-off lists my area under the sensing and communication side of the robot, specifically the mmWave radar and LoRa sensor work. My contribution centered on the sensor pipeline and how environmental readings were transmitted back through the communication layer rather than only on the locomotion hardware itself.</div>
+
+    <section class="project-hero">
+      <div class="hero-copy">
+        <p>This project was built for INF2004 Embedded Systems and framed as a semi-autonomous search-and-rescue robot for collapsed or hazardous spaces. The idea was to create a four-legged spider-inspired robot that could move through unstable environments, detect obstacles, identify signs of survivors, and report findings back to a human operator rather than acting as a fully independent robot.</p>
+        <p>The system architecture split responsibilities between a computer pico and a sensor pico, with LoRa modules carrying commands and sensor data between them. The robot combined 8-servo locomotion with a mmWave radar, heat sensor, and microphone so it could keep moving, scan for obstacles, verify possible human presence, and reroute when it encountered dead ends or blocked paths.</p>
+        <p>A lot of the design work was centered on state machines rather than ad hoc motion code. The proposal documented dedicated servo states, obstacle-handling flow, pathfinding logic, and a multi-sensor confirmation process so the robot could reduce false positives before escalating a potential survivor alert.</p>
+        <div class="badge-row">
+          <span class="detail-badge">Embedded Systems</span>
+          <span class="detail-badge">LoRa</span>
+          <span class="detail-badge">MMWave Radar</span>
+          <span class="detail-badge">UART</span>
+          <span class="detail-badge">I2C</span>
+          <span class="detail-badge">State Machines</span>
+        </div>
+      </div>
+
+      <div class="project-summary-panel">
+        <div class="summary-card">
+          <div class="summary-label">Period</div>
+          <div class="summary-value">Year 2, Trimester 1, 2025</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-label">Module</div>
+          <div class="summary-value">INF2004 Embedded Systems</div>
+          <div class="summary-copy">University coursework completed in 2025 around robot control, sensing, and embedded communication.</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-label">Platform</div>
+          <div class="summary-value">Dual-Pico robot architecture</div>
+          <div class="summary-copy">The design separated control logic and sensor handling across two Pico boards linked through LoRa.</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-label">Use Case</div>
+          <div class="summary-value">Post-disaster search and rescue</div>
+          <div class="summary-copy">The robot was designed to inspect dangerous spaces, navigate around rubble, and help identify possible survivors.</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="detail-grid">
+      <section class="detail-section">
+        <h2>Project scope</h2>
+        <ul class="detail-list">
+          <li>Designed a semi-autonomous four-legged spider robot intended for post-disaster search-and-rescue scenarios rather than simple remote-control movement.</li>
+          <li>Combined obstacle detection, pathfinding, survivor verification, and operator communication into one embedded system.</li>
+          <li>Engineered the robot around 8 servo motors, multiple sensing modules, and explicit state-driven behavior for locomotion and rerouting.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Locomotion and control</h2>
+        <ul class="detail-list">
+          <li>Used a servo state machine to manage standby, directional movement, turning, custom walk, temperature walk, and backtracking behavior.</li>
+          <li>Structured the navigation logic around statechart diagrams so obstacle handling and movement transitions remained explicit and testable.</li>
+          <li>Treated locomotion as a stability problem, not just a motion problem, by coordinating state transitions around how the spider would traverse debris-filled spaces.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Sensors and communication</h2>
+        <ul class="detail-list">
+          <li>Integrated mmWave radar for obstacle detection and path assessment, with radar driver logic documented around scanning, parsing, classification, and alert states.</li>
+          <li>Used heat and sound sensing together so the robot could reduce false positives before escalating a human-detection event.</li>
+          <li>Connected the sensor and control layers through LoRa, allowing sensor findings and movement commands to move between the two Pico boards.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>My contribution</h2>
+        <ul class="detail-list">
+          <li>Worked on the sensing and communication side of the robot, especially the mmWave radar and LoRa sensor path.</li>
+          <li>Contributed around temperature and heat-related sensing flow, plus how sensor information was transmitted back through the communication layer.</li>
+          <li>Helped on the part of the system that connected environmental detection to robot decision-making, rather than only on the servo actuation side.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Interfaces and verification</h2>
+        <ul class="detail-list">
+          <li>The proposal documented UART-based radar and LoRa communication, plus I2C-based sensor and motor-related interfaces.</li>
+          <li>Verification targets included obstacle-detection latency, LoRa communication range and delay, heat-detection accuracy, and end-to-end message transmission timing.</li>
+          <li>The report also surfaced real embedded limitations such as radar reflection noise, blind zones, surface-dependent stability, and communication failure handling.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Tools and concepts</h2>
+        <div class="stack-list">
+          <span class="stack-pill">Raspberry Pi Pico</span>
+          <span class="stack-pill">Servo control</span>
+          <span class="stack-pill">LoRa</span>
+          <span class="stack-pill">MMWave radar</span>
+          <span class="stack-pill">Heat sensing</span>
+          <span class="stack-pill">Microphone input</span>
+          <span class="stack-pill">UART</span>
+          <span class="stack-pill">I2C</span>
+          <span class="stack-pill">Embedded state machines</span>
+          <span class="stack-pill">Robot navigation</span>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h2>Project material</h2>
+        <p>This page is based on the embedded project proposal and its design diagrams, driver notes, and verification sections.</p>
+        <p><a href="assets/docs/embedded-spider-project-proposal.pdf" target="_blank" rel="noreferrer">View project proposal (PDF)</a></p>
+      </section>
+    </div>
+  </div>
+</main>
+
+<script>
+  (function () {
+    const gallery = document.querySelector('[data-gallery]');
+    if (!gallery) return;
+
+    const stageImage = gallery.querySelector('[data-gallery-image]');
+    const caption = gallery.querySelector('[data-gallery-caption]');
+    const thumbnails = Array.from(gallery.querySelectorAll('[data-gallery-thumb]'));
+    const prevButton = gallery.querySelector('[data-gallery-prev]');
+    const nextButton = gallery.querySelector('[data-gallery-next]');
+    let currentIndex = 0;
+
+    function setSlide(index) {
+      currentIndex = (index + thumbnails.length) % thumbnails.length;
+
+      thumbnails.forEach(function (thumb, thumbIndex) {
+        const isActive = thumbIndex === currentIndex;
+        thumb.classList.toggle('is-active', isActive);
+        thumb.setAttribute('aria-pressed', String(isActive));
+      });
+
+      const activeThumb = thumbnails[currentIndex];
+      stageImage.src = activeThumb.dataset.src;
+      stageImage.alt = activeThumb.dataset.alt;
+      if (caption) {
+        caption.textContent = activeThumb.dataset.caption;
+      }
+    }
+
+    thumbnails.forEach(function (thumb, index) {
+      thumb.addEventListener('click', function () {
+        setSlide(index);
+      });
+    });
+
+    prevButton.addEventListener('click', function () {
+      setSlide(currentIndex - 1);
+    });
+
+    nextButton.addEventListener('click', function () {
+      setSlide(currentIndex + 1);
+    });
+  }());
+</script>
+</body>
+</html>
