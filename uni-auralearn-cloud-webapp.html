@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AuraLearn Cloud Web App | Projects | Subhashini Rajkumar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/project-detail.css">
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">Subhashini Rajkumar</a>
+  <ul class="nav-tabs">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a class="active" href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="page page-standalone">
+  <div class="inner-page">
+    <a class="back-link" href="projects.html#uni-projects">Back to all projects</a>
+    <div class="section-label">University - SIT &times; University of Glasgow</div>
+    <h1 class="section-title">AuraLearn Cloud Web App</h1>
+    <p class="project-kicker">A Year 2, Trimester 1, 2025 Cloud and Distributed Computing project that proposed a cloud-based learning platform for MOE secondary students, combining document management, collaborative whiteboarding, flashcards, and cloud-native deployment for secure and scalable digital learning.</p>
+
+    <section class="project-gallery" data-gallery>
+      <div class="gallery-stage">
+        <img
+          class="gallery-stage-image"
+          src="assets/images/cloud-auralearn/auralearn-frontend-architecture.png"
+          alt="Frontend architecture diagram for the AuraLearn cloud web app showing browser pages, local storage, runtime state, REST APIs, realtime services, and Nginx hosting."
+          loading="eager"
+          data-gallery-image
+        >
+      </div>
+      <div class="gallery-meta">
+        <p class="gallery-caption" data-gallery-caption>Frontend architecture diagram from the report showing the browser-based pages, session handling, and connections to REST and realtime services.</p>
+        <div class="gallery-controls">
+          <button class="gallery-control" type="button" data-gallery-prev>Previous</button>
+          <button class="gallery-control" type="button" data-gallery-next>Next</button>
+        </div>
+      </div>
+      <div class="gallery-thumbs" aria-label="AuraLearn project visuals">
+        <button
+          class="gallery-thumb is-active"
+          type="button"
+          aria-pressed="true"
+          data-gallery-thumb
+          data-src="assets/images/cloud-auralearn/auralearn-frontend-architecture.png"
+          data-alt="Frontend architecture diagram for the AuraLearn cloud web app showing browser pages, local storage, runtime state, REST APIs, realtime services, and Nginx hosting."
+          data-caption="Frontend architecture diagram from the report showing the browser-based pages, session handling, and connections to REST and realtime services."
+        >
+          <img src="assets/images/cloud-auralearn/auralearn-frontend-architecture.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Frontend</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/cloud-auralearn/auralearn-whiteboard-architecture.png"
+          data-alt="Whiteboard system architecture showing the dashboard, whiteboard client, WebSocket server, and Firestore storage."
+          data-caption="Whiteboard architecture from the report showing how the student dashboard, WebSocket server, and Firestore database were connected for collaborative drawing."
+        >
+          <img src="assets/images/cloud-auralearn/auralearn-whiteboard-architecture.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Whiteboard</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/cloud-auralearn/auralearn-flashcard-flow.png"
+          data-alt="Flashcard competition flow for the AuraLearn project showing link creation, deck selection, game start, and completion."
+          data-caption="Flashcard flow diagram from the report illustrating the real-time competition mode built on top of the cloud-backed deck system."
+        >
+          <img src="assets/images/cloud-auralearn/auralearn-flashcard-flow.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Flashcards</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/cloud-auralearn/auralearn-instance-count.png"
+          data-alt="Cloud service instance-count chart showing backend, flashcard, and whiteboard services scaling up and down."
+          data-caption="Cloud evaluation screenshot showing service instance counts and scale-to-zero behavior across the backend, flashcard, and whiteboard services."
+        >
+          <img src="assets/images/cloud-auralearn/auralearn-instance-count.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Scaling</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/cloud-auralearn/auralearn-performance-table.png"
+          data-alt="Cloud performance table comparing request rates, latency, and error rates across the backend, flashcard, and whiteboard services."
+          data-caption="Performance summary table from the report comparing request load, latency, and error rates across the cloud services."
+        >
+          <img src="assets/images/cloud-auralearn/auralearn-performance-table.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Performance</span>
+        </button>
+      </div>
+    </section>
+
+    <div class="project-note">My contribution covered both the frontend and cloud-storage parts of AuraLearn, including page flows, UI behavior, login and signup journeys, dashboard interactions, the signed-URL upload flow, storage structure design, and the upload, view, and copy pipeline for student files.</div>
+
+    <section class="project-hero">
+      <div class="hero-copy">
+        <p>AuraLearn was designed as a cloud-based online learning platform for secondary students, positioned as a more centralized and interactive alternative to fragmented school workflows spread across multiple tools. The goal was to create a secure, paperless learning environment where teaching materials, student copies, whiteboards, and flashcards could live inside one coordinated platform.</p>
+        <p>The project followed a cloud-native structure rather than a single bundled app. The frontend was a multi-page HTML, CSS, and JavaScript web application, while the backend and realtime features were split across services for documents, flashcards, and collaborative whiteboarding. Firestore handled shared data and realtime synchronization, while cloud storage managed uploaded lesson materials, student copies, and exported files. Dockerized services were deployed on Cloud Run, with Firebase Hosting serving the static frontend globally.</p>
+        <p>One of the most important design decisions was the storage model. The platform separated school storage from personal student storage, then used backend-generated signed URLs so browsers could upload and fetch files without exposing direct storage access. That helped keep the system scalable while still letting the backend control placement, access, and metadata updates.</p>
+        <div class="badge-row">
+          <span class="detail-badge">HTML</span>
+          <span class="detail-badge">CSS</span>
+          <span class="detail-badge">JavaScript</span>
+          <span class="detail-badge">Docker</span>
+          <span class="detail-badge">Firebase</span>
+          <span class="detail-badge">Firestore</span>
+        </div>
+      </div>
+
+      <div class="project-summary-panel">
+        <div class="summary-card">
+          <div class="summary-label">Period</div>
+          <div class="summary-value">Year 2, Trimester 1, 2025</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-label">Module</div>
+          <div class="summary-value">Cloud and Distributed Computing</div>
+          <div class="summary-copy">University coursework focused on cloud-native application design, service separation, and scalable deployment.</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-label">Application</div>
+          <div class="summary-value">AuraLearn</div>
+          <div class="summary-copy">A cloud-based MOE learning platform with documents, collaborative whiteboards, and flashcards.</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-label">Deployment</div>
+          <div class="summary-value">Cloud-native multi-service setup</div>
+          <div class="summary-copy">Frontend hosted separately from backend and realtime services, with cloud evaluation around scaling, latency, and cost control.</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="detail-grid">
+      <section class="detail-section">
+        <h2>Problem and solution</h2>
+        <ul class="detail-list">
+          <li>Addressed the lack of a centralized, engaging learning platform for secondary students, especially where materials were split across multiple systems.</li>
+          <li>Proposed a private, collaborative, paperless platform that combined document management, whiteboards, and flashcards inside one cloud-backed workflow.</li>
+          <li>Aligned the system to MOE-style digital learning by making the platform both interactive and operationally scalable rather than just a static file repository.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Architecture</h2>
+        <ul class="detail-list">
+          <li>Built the frontend as a framework-free multi-page site using HTML, CSS, and JavaScript, with local storage and in-memory state managing client-side session and runtime behavior.</li>
+          <li>Split the backend responsibilities across standard REST APIs, a whiteboard realtime server, and a flashcard realtime service rather than combining everything into one process.</li>
+          <li>Used Firestore for shared state and realtime persistence, while cloud storage handled files and document assets under backend-controlled access rules.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Cloud storage flow</h2>
+        <ul class="detail-list">
+          <li>Organized files by user and context, supporting school storage and private student storage within the wider learning platform.</li>
+          <li>Used short-lived signed PUT URLs for uploads and signed read URLs for document access so browsers could transfer files without direct open storage access.</li>
+          <li>Handled document sharing through backend-controlled copy operations, which helped preserve isolation between shared school materials and student-owned copies.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>My contribution</h2>
+        <ul class="detail-list">
+          <li>Handled the frontend flow and frontend-to-backend connection for login, dashboards, document actions, and the signed-URL upload pipeline.</li>
+          <li>Built and structured the cloud storage bucket workflow, including the storage layout, upload/view signed-URL flow, and atomic copy handling for student files.</li>
+          <li>Worked on the secure and modular side of the system, making sure storage operations were routed through the backend rather than exposed directly to the client.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Realtime and collaboration</h2>
+        <ul class="detail-list">
+          <li>The whiteboard feature used WebSockets plus Firestore-backed persistence so multiple users could draw collaboratively in the same document room.</li>
+          <li>The flashcard feature used a hybrid model, with REST for CRUD and Socket.IO for real-time competition and synchronized state updates.</li>
+          <li>The overall service split helped keep the collaboration features isolated, which made scaling and cost behavior easier to reason about.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Cloud deployment and evaluation</h2>
+        <ul class="detail-list">
+          <li>The report describes containerized deployment using Docker, cloud-hosted services, and scale-to-zero behavior to control cost when the system was idle.</li>
+          <li>Cloud evaluation focused on instance counts, latency, CPU usage, and per-service performance rather than only feature completeness.</li>
+          <li>The architecture aimed for separation, reproducibility, and fault containment so frontend, whiteboard, flashcards, and backend operations could evolve more independently.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Tools and concepts</h2>
+        <div class="stack-list">
+          <span class="stack-pill">HTML</span>
+          <span class="stack-pill">CSS</span>
+          <span class="stack-pill">JavaScript</span>
+          <span class="stack-pill">Docker</span>
+          <span class="stack-pill">Kubernetes</span>
+          <span class="stack-pill">Firebase Hosting</span>
+          <span class="stack-pill">Firestore</span>
+          <span class="stack-pill">Cloud Storage</span>
+          <span class="stack-pill">Cloud Run</span>
+          <span class="stack-pill">WebSockets</span>
+          <span class="stack-pill">Socket.IO</span>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h2>Project material</h2>
+        <p>This page is based on the final cloud report, including the architecture, implementation, evaluation, and conclusion sections.</p>
+        <p><a href="assets/docs/auralearn-cloud-final-report.pdf" target="_blank" rel="noreferrer">View final report (PDF)</a></p>
+      </section>
+    </div>
+  </div>
+</main>
+
+<script>
+  (function () {
+    const gallery = document.querySelector('[data-gallery]');
+    if (!gallery) return;
+
+    const stageImage = gallery.querySelector('[data-gallery-image]');
+    const caption = gallery.querySelector('[data-gallery-caption]');
+    const thumbnails = Array.from(gallery.querySelectorAll('[data-gallery-thumb]'));
+    const prevButton = gallery.querySelector('[data-gallery-prev]');
+    const nextButton = gallery.querySelector('[data-gallery-next]');
+    let currentIndex = 0;
+
+    function setSlide(index) {
+      currentIndex = (index + thumbnails.length) % thumbnails.length;
+
+      thumbnails.forEach(function (thumb, thumbIndex) {
+        const isActive = thumbIndex === currentIndex;
+        thumb.classList.toggle('is-active', isActive);
+        thumb.setAttribute('aria-pressed', String(isActive));
+      });
+
+      const activeThumb = thumbnails[currentIndex];
+      stageImage.src = activeThumb.dataset.src;
+      stageImage.alt = activeThumb.dataset.alt;
+      if (caption) {
+        caption.textContent = activeThumb.dataset.caption;
+      }
+    }
+
+    thumbnails.forEach(function (thumb, index) {
+      thumb.addEventListener('click', function () {
+        setSlide(index);
+      });
+    });
+
+    prevButton.addEventListener('click', function () {
+      setSlide(currentIndex - 1);
+    });
+
+    nextButton.addEventListener('click', function () {
+      setSlide(currentIndex + 1);
+    });
+  }());
+</script>
+</body>
+</html>
