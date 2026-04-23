@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bug Tracking System | Projects | Subhashini Rajkumar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/project-detail.css">
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">Subhashini Rajkumar</a>
+  <ul class="nav-tabs">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a class="active" href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="page page-standalone">
+  <div class="inner-page">
+    <a class="back-link" href="projects.html#uni-projects">Back to all projects</a>
+    <div class="section-label">University - SIT &times; University of Glasgow</div>
+    <h1 class="section-title">Bug Tracking System</h1>
+    <p class="project-kicker">A Year 1, Trimester 3 web programming group project completed in 2025 as a web-based bug tracking system with role-based access control, project management, and developer assignment workflows.</p>
+
+    <div class="project-note">Group project note: the source code for this project is available on <a href="https://github.com/subhaa2/webprog_group_quiz/tree/main/webprog_group_quiz" target="_blank" rel="noreferrer">GitHub</a>, where the implementation uses Rust, Actix-web, Tera templates, and SQLite to support a role-based bug tracking workflow.</div>
+
+    <section class="project-hero">
+      <div class="hero-copy">
+        <p>This project was built for the Web Programming module as a group-based bug tracking system. Instead of a simple static site, the repository implements a working web application with authentication, session handling, persistent data storage, and role-aware workflows for administrators, developers, and QA testers.</p>
+        <p>The system supports project creation, bug reporting, bug assignment, bug updates, and bug deletion through a mix of API endpoints and HTML template pages. The overall design is centered on practical workflow rules, such as restricting who can assign bugs, who can create projects, and how users interact with open defects across different roles.</p>
+        <p>From the repository structure, the app was built with Rust using Actix-web for the server layer, Tera for HTML templating, and SQLite for persistence. The project also shows attention to security and workflow concerns through password hashing, session-based authentication, and role-based permissions.</p>
+        <div class="badge-row">
+          <span class="detail-badge">Rust</span>
+          <span class="detail-badge">Actix-web</span>
+          <span class="detail-badge">SQLite</span>
+          <span class="detail-badge">Tera</span>
+          <span class="detail-badge">Role-Based Access</span>
+          <span class="detail-badge">Web App</span>
+        </div>
+      </div>
+
+      <div class="project-summary-panel">
+        <div class="summary-card">
+          <div class="summary-label">Period</div>
+          <div class="summary-value">Year 1, Trimester 3</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-label">Module</div>
+          <div class="summary-value">Web Programming</div>
+          <div class="summary-copy">University coursework completed in 2025 as a group-built server-rendered web application.</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-label">Core Stack</div>
+          <div class="summary-value">Rust, Actix-web, SQLite</div>
+          <div class="summary-copy">Implemented as a backend-driven web app with session auth, database persistence, and Tera templates.</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-label">Product</div>
+          <div class="summary-value">Bug tracking workflow</div>
+          <div class="summary-copy">Focused on issue creation, assignment, updates, and project-level defect management.</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="detail-grid">
+      <section class="detail-section">
+        <h2>What we built</h2>
+        <ul class="detail-list">
+          <li>Built a web-based bug tracking system rather than a static site, with support for projects, bug reports, assignments, and user sessions.</li>
+          <li>Created role-based workflows so admins, developers, and QA testers could interact with the system under different permissions.</li>
+          <li>Included both API-style endpoints and template-based pages for actions such as login, registration, bug assignment, and bug updates.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Technical structure</h2>
+        <ul class="detail-list">
+          <li>Used Actix-web to define the server, routes, session middleware, and request handlers.</li>
+          <li>Used SQLite with SQLx queries for storing users, projects, and bug reports persistently.</li>
+          <li>Used Tera templates for HTML pages such as login, registration, bug assignment, and update forms.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Workflow logic</h2>
+        <ul class="detail-list">
+          <li>Admins could create projects and assign bugs broadly across developers.</li>
+          <li>QA users could create bugs and assign them to developers while avoiding invalid assignment cases such as assigning to QA users or themselves.</li>
+          <li>Developers could create and update bugs while staying within the role rules defined by the system.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Tools and concepts</h2>
+        <div class="stack-list">
+          <span class="stack-pill">Rust</span>
+          <span class="stack-pill">Actix-web</span>
+          <span class="stack-pill">SQLite</span>
+          <span class="stack-pill">SQLx</span>
+          <span class="stack-pill">Tera templates</span>
+          <span class="stack-pill">Session authentication</span>
+          <span class="stack-pill">Password hashing</span>
+          <span class="stack-pill">Role-based access control</span>
+          <span class="stack-pill">Project management</span>
+          <span class="stack-pill">Bug assignment workflows</span>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+</body>
+</html>

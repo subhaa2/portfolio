@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Route Radar | Projects | Subhashini Rajkumar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/project-detail.css">
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">Subhashini Rajkumar</a>
+  <ul class="nav-tabs">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a class="active" href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="page page-standalone">
+  <div class="inner-page">
+    <a class="back-link" href="projects.html#uni-projects">Back to all projects</a>
+    <div class="section-label">University - SIT &times; University of Glasgow</div>
+    <h1 class="section-title">Route Radar</h1>
+    <p class="project-kicker">A Year 1, Trimester 2 Data Structures and Algorithm project completed in 2025 by a team of six students to design a Python flight map routing application that could calculate and rank routes between airports.</p>
+
+    <section class="project-gallery" data-gallery>
+      <div class="gallery-stage">
+        <img
+          class="gallery-stage-image"
+          src="assets/images/route-radar/slides/Slide1.PNG"
+          alt="Opening slide from the Route Radar presentation with the project branding and tagline."
+          loading="eager"
+          data-gallery-image
+        >
+      </div>
+      <div class="gallery-meta">
+        <div class="gallery-controls">
+          <button class="gallery-control" type="button" data-gallery-prev>Previous</button>
+          <button class="gallery-control" type="button" data-gallery-next>Next</button>
+        </div>
+      </div>
+      <div class="gallery-thumbs" aria-label="Route Radar presentation slides">
+        <button
+          class="gallery-thumb is-active"
+          type="button"
+          aria-pressed="true"
+          data-gallery-thumb
+          data-src="assets/images/route-radar/slides/Slide1.PNG"
+          data-alt="Opening slide from the Route Radar presentation with the project branding and tagline."
+        >
+          <img src="assets/images/route-radar/slides/Slide1.PNG" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Project Cover</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/route-radar/slides/Slide3.PNG"
+          data-alt="Team contribution slide from the Route Radar deck showing the group split across data structure, algorithms, and user interface work."
+          data-caption="Team contribution slide showing how the group split the work across data structures, algorithms, and the user interface."
+        >
+          <img src="assets/images/route-radar/slides/Slide3.PNG" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Team Roles</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/route-radar/slides/Slide19.PNG"
+          data-alt="Route selection process slide from the Route Radar deck outlining input validation, route computation, price adjustment, and ranked results."
+          data-caption="Route selection process slide outlining how the app validated inputs, computed routes, adjusted seasonal pricing, and returned ranked options."
+        >
+          <img src="assets/images/route-radar/slides/Slide19.PNG" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Routing Flow</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/route-radar/slides/Slide24.PNG"
+          data-alt="User input slide from the Route Radar presentation showing airport selection and date entry behaviour."
+          data-caption="User input slide showing the airport search flow and date selection used to trigger the routing logic."
+        >
+          <img src="assets/images/route-radar/slides/Slide24.PNG" alt="" loading="lazy">
+          <span class="gallery-thumb-label">User Input</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/route-radar/slides/Slide28.PNG"
+          data-alt="Full Route Radar application screen showing available routes beside the interactive route map."
+          data-caption="Full application screen showing the route list, pricing information, and interactive map visualization together."
+        >
+          <img src="assets/images/route-radar/slides/Slide28.PNG" alt="" loading="lazy">
+          <span class="gallery-thumb-label">App Screen</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/route-radar/slides/Slide31.PNG"
+          data-alt="Filtering slide from the Route Radar deck showing airline, price range, layover, and saved-route filters."
+          data-caption="Filtering slide showing how users could narrow route results by airline, price range, layovers, and saved routes."
+        >
+          <img src="assets/images/route-radar/slides/Slide31.PNG" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Filtering</span>
+        </button>
+      </div>
+    </section>
+
+    <div class="project-note">Team project note: the goal of this project was not only to apply data structures and algorithms correctly, but also to translate that logic into a usable product through teamwork, algorithm integration, and a clear visual interface. My contribution focused on the UI and on connecting the frontend flow to the backend routing logic.</div>
+
+    <section class="project-hero">
+      <div class="hero-copy">
+        <p>Route Radar was built for the Data Structures and Algorithm module as a flight map routing project. The application had to model airport connections efficiently, evaluate route options, and present those results in a way that users could understand quickly rather than treating the algorithm as a console-only exercise.</p>
+        <p>The final product was a functional flight routing application that could calculate the shortest route, the lowest-cost route, and the most effective overall path between airports. The project combined graph-based modelling, Python implementation, route ranking logic, and a visual UI to display route options, total distance, ticket prices, and travel time. In particular, the system used Dijkstra's Algorithm to find the shortest distance between airports and Breadth-First Search (BFS) to find routes with the fewest layovers.</p>
+        <p>My role was on the product-facing side of the system. I worked on the UI of the app and connected the frontend interactions to the backend algorithm so that the routing logic could be surfaced properly through the interface instead of remaining isolated from the user experience.</p>
+        <div class="badge-row">
+          <span class="detail-badge">Python</span>
+          <span class="detail-badge">Data Structures</span>
+          <span class="detail-badge">Algorithms</span>
+          <span class="detail-badge">Graphs</span>
+          <span class="detail-badge">UI Design</span>
+          <span class="detail-badge">Frontend/Backend Integration</span>
+        </div>
+      </div>
+
+      <div class="project-summary-panel">
+        <div class="summary-card">
+          <div class="summary-label">Period</div>
+          <div class="summary-value">Year 1, Trimester 2</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-label">Module</div>
+          <div class="summary-value">Data Structures and Algorithm</div>
+          <div class="summary-copy">University coursework completed in 2025 around graph-based route computation and ranking.</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-label">Team</div>
+          <div class="summary-value">6 students</div>
+          <div class="summary-copy">The app was designed and implemented collaboratively with shared responsibility across logic, features, and delivery.</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-label">Final Product</div>
+          <div class="summary-value">Flight routing application</div>
+          <div class="summary-copy">Completed as a working app that compared route options by distance, cost, and overall effectiveness.</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="detail-grid">
+      <section class="detail-section">
+        <h2>Project scope</h2>
+        <ul class="detail-list">
+          <li>Designed a flight map routing system to find and rank routes between airports rather than returning only a single path.</li>
+          <li>Modelled airport connections using graph-based structures such as adjacency lists so routes could be represented efficiently.</li>
+          <li>Focused on practical outputs that users actually care about, including total distance, ticket prices, travel time, and comparative route quality.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Algorithm focus</h2>
+        <ul class="detail-list">
+          <li>Used Dijkstra's Algorithm to compute the shortest-distance route between airport nodes in the flight graph.</li>
+          <li>Used Breadth-First Search (BFS) to find routes with the fewest layovers between airports.</li>
+          <li>Applied route-selection logic to compare shortest, lowest-cost, and most cost-effective flight options.</li>
+          <li>Turned theoretical data structures and algorithm concepts into a working application rather than keeping them at pseudocode level.</li>
+          <li>Balanced correctness of the route computations with clarity of presentation so the results would remain understandable to end users.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>My contribution</h2>
+        <ul class="detail-list">
+          <li>Worked on the UI design and presentation of the application so the route results felt clear and usable.</li>
+          <li>Connected the frontend flow to the backend algorithm so route calculations could be triggered and displayed properly in the app.</li>
+          <li>Helped bridge the technical routing logic and the user-facing experience, which was important for the final demo and visualization quality.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Tools and concepts</h2>
+        <div class="stack-list">
+          <span class="stack-pill">Python</span>
+          <span class="stack-pill">Graphs</span>
+          <span class="stack-pill">Adjacency lists</span>
+          <span class="stack-pill">Dijkstra's Algorithm</span>
+          <span class="stack-pill">Breadth-First Search</span>
+          <span class="stack-pill">Route ranking</span>
+          <span class="stack-pill">Pathfinding</span>
+          <span class="stack-pill">Frontend/backend integration</span>
+          <span class="stack-pill">UI design</span>
+          <span class="stack-pill">Visualization</span>
+          <span class="stack-pill">Team collaboration</span>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<script>
+  (function () {
+    const gallery = document.querySelector('[data-gallery]');
+    if (!gallery) return;
+
+    const stageImage = gallery.querySelector('[data-gallery-image]');
+    const caption = gallery.querySelector('[data-gallery-caption]');
+    const thumbnails = Array.from(gallery.querySelectorAll('[data-gallery-thumb]'));
+    const prevButton = gallery.querySelector('[data-gallery-prev]');
+    const nextButton = gallery.querySelector('[data-gallery-next]');
+    let currentIndex = 0;
+
+    function setSlide(index) {
+      currentIndex = (index + thumbnails.length) % thumbnails.length;
+
+      thumbnails.forEach(function (thumb, thumbIndex) {
+        const isActive = thumbIndex === currentIndex;
+        thumb.classList.toggle('is-active', isActive);
+        thumb.setAttribute('aria-pressed', String(isActive));
+      });
+
+      const activeThumb = thumbnails[currentIndex];
+      stageImage.src = activeThumb.dataset.src;
+      stageImage.alt = activeThumb.dataset.alt;
+      if (caption) {
+        caption.textContent = activeThumb.dataset.caption;
+      }
+    }
+
+    thumbnails.forEach(function (thumb, index) {
+      thumb.addEventListener('click', function () {
+        setSlide(index);
+      });
+    });
+
+    prevButton.addEventListener('click', function () {
+      setSlide(currentIndex - 1);
+    });
+
+    nextButton.addEventListener('click', function () {
+      setSlide(currentIndex + 1);
+    });
+  }());
+</script>
+</body>
+</html>
