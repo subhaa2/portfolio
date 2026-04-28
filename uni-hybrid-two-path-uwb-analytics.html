@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Warehouse UWB Localization Analytics | Projects | Subhashini Rajkumar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/project-detail.css">
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">Subhashini Rajkumar</a>
+  <ul class="nav-tabs">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a class="active" href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="page page-standalone">
+  <div class="inner-page">
+    <a class="back-link" href="projects.html#uni-projects">Back to all projects</a>
+    <div class="section-label">University - SIT &times; University of Glasgow</div>
+    <h1 class="section-title">Warehouse UWB Localization Analytics</h1>
+    <p class="project-kicker">A Year 2, Trimester 2, 2026 Data Analytics mini-project completed by a team of five students, using feature engineering, PCA, Random Forest classification, and multi-output regression to model LOS/NLOS UWB signal behaviour for warehouse robot localization.</p>
+
+    <section class="project-gallery" data-gallery>
+      <div class="gallery-stage">
+        <img
+          class="gallery-stage-image"
+          src="assets/images/data-analytics-uwb/classification-summary.png"
+          alt="Combined classification summary showing the two-path confusion matrix beside the top feature importance ranking."
+          loading="eager"
+          data-gallery-image
+        >
+      </div>
+      <div class="gallery-meta">
+        <p class="gallery-caption" data-gallery-caption>Classification summary combining the confusion matrix with the feature-importance ranking for the Random Forest gatekeeper model.</p>
+        <div class="gallery-controls">
+          <button class="gallery-control" type="button" data-gallery-prev>Previous</button>
+          <button class="gallery-control" type="button" data-gallery-next>Next</button>
+        </div>
+      </div>
+      <div class="gallery-thumbs" aria-label="Hybrid two-path UWB analytics figures">
+        <button
+          class="gallery-thumb is-active"
+          type="button"
+          aria-pressed="true"
+          data-gallery-thumb
+          data-src="assets/images/data-analytics-uwb/classification-summary.png"
+          data-alt="Combined classification summary showing the two-path confusion matrix beside the top feature importance ranking."
+          data-caption="Classification summary combining the confusion matrix with the feature-importance ranking for the Random Forest gatekeeper model."
+        >
+          <img src="assets/images/data-analytics-uwb/classification-summary.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Classifier</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/data-analytics-uwb/roc-curve.png"
+          data-alt="ROC curve for the LOS versus NLOS classifier with an AUC of 0.8941."
+          data-caption="ROC curve from the report showing strong separability between the two propagation states with an AUC of 0.8941."
+        >
+          <img src="assets/images/data-analytics-uwb/roc-curve.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">ROC Curve</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/data-analytics-uwb/regression-metrics.png"
+          data-alt="Train and test regression metrics table comparing RMSE, MAE, and R-squared for direct and reflected paths."
+          data-caption="Train and test regression metrics summarizing RMSE, MAE, and R-squared for both the direct path and reflected path distance estimates."
+        >
+          <img src="assets/images/data-analytics-uwb/regression-metrics.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Metrics</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/data-analytics-uwb/residuals.png"
+          data-alt="Residual plots for the direct path and reflected path regressors showing increasing error spread at longer predicted ranges."
+          data-caption="Residual plots from the report showing the funnel-shaped error pattern as predicted range increases for both direct and reflected paths."
+        >
+          <img src="assets/images/data-analytics-uwb/residuals.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Residuals</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/data-analytics-uwb/feature-distributions.png"
+          data-alt="Feature distribution boxplots comparing LOS and NLOS classes across FP_AMP1, STDEV_NOISE, MAX_NOISE, and RXPACC."
+          data-caption="Feature-distribution boxplots showing how several signal and noise features separate LOS and NLOS samples before classification."
+        >
+          <img src="assets/images/data-analytics-uwb/feature-distributions.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Features</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="project-hero">
+      <div class="hero-copy">
+        <p>This project addressed a warehouse-localization problem where autonomous robots rely on Ultra-Wideband (UWB) anchors for indoor positioning, but signal quality degrades when the robot moves into LOS/NLOS and NLOS/NLOS conditions around dense metal shelving. Instead of treating reflected paths as useless noise, the project modeled multipath behaviour directly so the signal could still carry useful information for navigation.</p>
+        <p>The workflow combined signal processing and machine learning. We merged all seven dataset parts, checked missing values and outliers, standardized the feature space, preserved <strong>FP_IDX</strong> for later signal analysis, extracted the second dominant CIR peak, and reduced the original 1,017 CIR dimensions using PCA while retaining 95% of the variance. That gave the downstream models both engineered radio features and compressed waveform patterns to work with.</p>
+        <p>The final solution used a Random Forest classifier as a gatekeeper for two-path state prediction and a multi-output Random Forest regressor to estimate both direct-path and reflected-path distances. My contribution was on the data-preparation side, especially cleaning and preparing the pipeline inputs before the later PCA and modeling stages.</p>
+        <div class="badge-row">
+          <span class="detail-badge">Python</span>
+          <span class="detail-badge">Data Analytics</span>
+          <span class="detail-badge">PCA</span>
+          <span class="detail-badge">Random Forest</span>
+          <span class="detail-badge">Classification</span>
+          <span class="detail-badge">Regression</span>
+        </div>
+      </div>
+
+      <div class="project-summary-panel">
+        <div class="summary-card">
+          <div class="summary-label">Period</div>
+          <div class="summary-value">Year 2, Trimester 2, 2026</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-label">Module</div>
+          <div class="summary-value">CSC3105 Data Analysis</div>
+          <div class="summary-copy">A data-analytics mini-project focused on turning noisy UWB signal measurements into more reliable localization information.</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-label">Team</div>
+          <div class="summary-value">5 students</div>
+          <div class="summary-copy">Work was split across classification, regression, data cleaning, PCA preparation, and visualization.</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-label">Dataset</div>
+          <div class="summary-value">42,000 balanced UWB samples</div>
+          <div class="summary-copy">The report used an equal split of 21,000 LOS and 21,000 NLOS observations for model building and evaluation.</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="detail-grid">
+      <section class="detail-section">
+        <h2>Problem and idea</h2>
+        <ul class="detail-list">
+          <li>Focused on indoor localization for warehouse robots, where metal shelving creates mixed LOS and NLOS propagation conditions that distort raw UWB ranging.</li>
+          <li>Reframed the problem as two linked analytics tasks: classify the propagation state first, then estimate both direct-path and reflected-path distances more reliably.</li>
+          <li>Used a hybrid two-path approach so reflected signals were modeled explicitly instead of discarded as noise.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Data pipeline</h2>
+        <ul class="detail-list">
+          <li>Merged seven dataset parts into one full dataset, audited missing values and outliers, and applied z-score normalization while preserving key columns such as <strong>FP_IDX</strong>.</li>
+          <li>Engineered multipath features by detecting the second dominant CIR peak after the first-path index, producing <strong>PEAK2_POS</strong> and <strong>PEAK2_AMP</strong>.</li>
+          <li>Reduced 1,017 CIR features to 860 principal components while retaining 95% of the variance, then combined those components with 12 structured radio features and the two engineered peak features.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Modeling approach</h2>
+        <ul class="detail-list">
+          <li>Used a 300-tree Random Forest classifier with balanced class weighting as a gatekeeper to distinguish <strong>State 0 (LOS-NLOS)</strong> from <strong>State 1 (NLOS-NLOS)</strong>.</li>
+          <li>Used a multi-output Random Forest regressor to predict both <strong>Path 1</strong> direct distance and <strong>Path 2</strong> reflected distance in parallel.</li>
+          <li>Built the workflow around feature engineering, ensemble learning, and dimensionality reduction rather than relying on a single raw-distance baseline.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Results</h2>
+        <ul class="detail-list">
+          <li>The classifier achieved <strong>84.64% accuracy</strong> with an <strong>AUC of 0.8941</strong>, showing strong overall separation between the two signal states.</li>
+          <li>The confusion matrix showed 3,857 correct State 0 predictions and 3,253 correct State 1 predictions, but also highlighted a more serious weakness: <strong>947 missed obstructions</strong> where NLOS was treated as clear.</li>
+          <li>The regressor reached test <strong>RMSE values of 1.4065 m and 1.4189 m</strong> for the direct and reflected paths, with <strong>R-squared values of 0.6402 and 0.6550</strong> respectively.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>What the plots showed</h2>
+        <ul class="detail-list">
+          <li>Feature-distribution boxplots confirmed that engineered and radio features such as <strong>FP_AMP1</strong>, <strong>STDEV_NOISE</strong>, <strong>MAX_NOISE</strong>, and <strong>RXPACC</strong> carried useful class-separation information.</li>
+          <li>The feature-importance ranking showed that several PCA components, along with <strong>RXPACC</strong>, noise metrics, and second-peak amplitude, were key decision drivers for the classifier.</li>
+          <li>Residual plots showed a funnel shape, meaning prediction error grew at longer distances, which matches the expected behaviour of UWB systems under stronger attenuation and multipath effects.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>My contribution</h2>
+        <ul class="detail-list">
+          <li>Handled the <strong>cleaning of data preparation</strong> portion of the project, which is how the report listed my role in the team breakdown.</li>
+          <li>Worked on the early preprocessing flow, including combining dataset parts, auditing missing values and outliers, and helping prepare the feature set for the later PCA and modeling stages.</li>
+          <li>Contributed to the part of the workflow that made the downstream classifier, regressor, and visualizations possible by keeping the data pipeline structured and consistent before modeling.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Limitations and learning</h2>
+        <ul class="detail-list">
+          <li>The report notes moderate generalization rather than perfect robustness, especially at longer ranges where residual spread and prediction error increased.</li>
+          <li>One key takeaway was that strong average metrics are not enough on their own when the cost of missed obstructions is high in a navigation setting.</li>
+          <li>Future improvements suggested in the report included collecting more long-range samples and exploring distance-weighted training to improve robustness across the warehouse operating range.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Tools and concepts</h2>
+        <div class="stack-list">
+          <span class="stack-pill">Python</span>
+          <span class="stack-pill">PCA</span>
+          <span class="stack-pill">Random Forest</span>
+          <span class="stack-pill">Multi-output regression</span>
+          <span class="stack-pill">ROC / AUC</span>
+          <span class="stack-pill">Confusion matrix</span>
+          <span class="stack-pill">Feature engineering</span>
+          <span class="stack-pill">Signal processing</span>
+          <span class="stack-pill">UWB CIR</span>
+          <span class="stack-pill">Warehouse robotics</span>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h2>Project material</h2>
+        <p>This page is based on the submitted mini-project report, especially the problem analysis, data-preparation pipeline, modeling sections, and plots/results pages.</p>
+        <p><a href="assets/docs/data-analytics-uwb-report.pdf" target="_blank" rel="noreferrer">View project report (PDF)</a></p>
+      </section>
+    </div>
+  </div>
+</main>
+
+<script>
+  (function () {
+    const gallery = document.querySelector('[data-gallery]');
+    if (!gallery) return;
+
+    const stageImage = gallery.querySelector('[data-gallery-image]');
+    const caption = gallery.querySelector('[data-gallery-caption]');
+    const thumbnails = Array.from(gallery.querySelectorAll('[data-gallery-thumb]'));
+    const prevButton = gallery.querySelector('[data-gallery-prev]');
+    const nextButton = gallery.querySelector('[data-gallery-next]');
+    let currentIndex = 0;
+
+    function setSlide(index) {
+      currentIndex = (index + thumbnails.length) % thumbnails.length;
+
+      thumbnails.forEach(function (thumb, thumbIndex) {
+        const isActive = thumbIndex === currentIndex;
+        thumb.classList.toggle('is-active', isActive);
+        thumb.setAttribute('aria-pressed', String(isActive));
+      });
+
+      const activeThumb = thumbnails[currentIndex];
+      stageImage.src = activeThumb.dataset.src;
+      stageImage.alt = activeThumb.dataset.alt;
+      if (caption) {
+        caption.textContent = activeThumb.dataset.caption;
+      }
+    }
+
+    thumbnails.forEach(function (thumb, index) {
+      thumb.addEventListener('click', function () {
+        setSlide(index);
+      });
+    });
+
+    prevButton.addEventListener('click', function () {
+      setSlide(currentIndex - 1);
+    });
+
+    nextButton.addEventListener('click', function () {
+      setSlide(currentIndex + 1);
+    });
+  }());
+</script>
+</body>
+</html>
