@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FastReact Distributed Quiz System | Projects | Subhashini Rajkumar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/project-detail.css">
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">Subhashini Rajkumar</a>
+  <ul class="nav-tabs">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a class="active" href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="page page-standalone">
+  <div class="inner-page">
+    <a class="back-link" href="projects.html#uni-projects">Back to all projects</a>
+    <div class="section-label">University - SIT &times; University of Glasgow</div>
+    <h1 class="section-title">FastReact Distributed Quiz System</h1>
+    <p class="project-kicker">A Year 2, Trimester 2, 2026 IoT Protocols and Networks project that built a distributed multi-hop wireless quiz system on ESP32-based devices, using local timestamp arbitration, ESP-NOW, and AODV-like routing to keep first-responder detection fair under latency, congestion, and relay depth.</p>
+
+    <section class="project-gallery" data-gallery>
+      <div class="gallery-stage">
+        <img
+          class="gallery-stage-image"
+          src="assets/images/iot-fastreact/iot-concept-overview.png"
+          alt="Concept overview image for the FastReact system showing the button game idea, hardware setup, and tech stack."
+          loading="eager"
+          data-gallery-image
+        >
+      </div>
+      <div class="gallery-meta">
+        <p class="gallery-caption" data-gallery-caption>Concept overview image summarizing the button game idea, the ESP32 node setup, and the core networking and security stack.</p>
+        <div class="gallery-controls">
+          <button class="gallery-control" type="button" data-gallery-prev>Previous</button>
+          <button class="gallery-control" type="button" data-gallery-next>Next</button>
+        </div>
+      </div>
+      <div class="gallery-thumbs" aria-label="FastReact IoT project visuals">
+        <button
+          class="gallery-thumb is-active"
+          type="button"
+          aria-pressed="true"
+          data-gallery-thumb
+          data-src="assets/images/iot-fastreact/iot-concept-overview.png"
+          data-alt="Concept overview image for the FastReact system showing the button game idea, hardware setup, and tech stack."
+          data-caption="Concept overview image summarizing the button game idea, the ESP32 node setup, and the core networking and security stack."
+        >
+          <img src="assets/images/iot-fastreact/iot-concept-overview.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Overview</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/iot-fastreact/iot-round-flow.png"
+          data-alt="Round flow image showing the GO signal, player reaction timing, and winner determination sequence."
+          data-caption="Round flow image showing how the GO signal is broadcast, how each node records local reaction time, and how the winner is determined."
+        >
+          <img src="assets/images/iot-fastreact/iot-round-flow.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Round Flow</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/iot-fastreact/iot-hardware-panel.png"
+          data-alt="Hardware image listing the ESP32 M5StickC Plus setup, built-in buttons, LCD screen outputs, and portable power."
+          data-caption="Hardware summary image showing the 4-device ESP32 setup, on-device button inputs, LCD feedback, and portable deployment model."
+        >
+          <img src="assets/images/iot-fastreact/iot-hardware-panel.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Hardware</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/iot-fastreact/iot-software-panel.png"
+          data-alt="Software image listing the Arduino C plus plus stack, libraries, ESP-NOW communication, and custom routing and game protocol."
+          data-caption="Software summary image covering the Arduino C plus plus implementation, key libraries, ESP-NOW communication, and the custom multi-hop game protocol."
+        >
+          <img src="assets/images/iot-fastreact/iot-software-panel.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Software</span>
+        </button>
+        <button
+          class="gallery-thumb"
+          type="button"
+          aria-pressed="false"
+          data-gallery-thumb
+          data-src="assets/images/iot-fastreact/sequence-diagram.png"
+          data-alt="Sequence diagram from the design report showing GO-signal broadcast, local timer start, reaction packets, server comparison, and result packets."
+          data-caption="Sequence diagram from the design report showing how GO packets, local timers, reaction packets, and result broadcasts were coordinated across the distributed game round."
+        >
+          <img src="assets/images/iot-fastreact/sequence-diagram.png" alt="" loading="lazy">
+          <span class="gallery-thumb-label">Sequence Flow</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="project-hero">
+      <div class="hero-copy">
+        <p><strong>FastReact</strong> was designed as a distributed wireless quiz system where multiple players compete to press a button first, but the real engineering challenge was fairness rather than simple button input. In a real wireless environment, the packet that reaches the server first is not always the button that was physically pressed first because network jitter, congestion, and relay depth can distort arrival order.</p>
+        <p>The project addressed that by shifting the decision logic away from server receive time. Each ESP32-based node started its own timer when it received a synchronized <strong>GO</strong> signal and then sent its local <strong>reaction_ms</strong> back to the server. That meant the winner could be decided using local timing instead of packet arrival order, which is the central idea that made the system latency-resilient.</p>
+        <p>The full prototype combined ESP-NOW for low-latency connectionless communication, a simplified AODV-like routing approach for relay support, and lightweight security controls such as ESP-NOW AES-128 unicast encryption, HMAC-based authentication, replay suppression, and protocol-version checks. The result was a small but fully distributed IoT system that treated fairness, routing, and security as part of one design problem.</p>
+        <div class="badge-row">
+          <span class="detail-badge">ESP32</span>
+          <span class="detail-badge">ESP-NOW</span>
+          <span class="detail-badge">AODV-like Routing</span>
+          <span class="detail-badge">Timestamp Arbitration</span>
+          <span class="detail-badge">HMAC-SHA256</span>
+          <span class="detail-badge">IoT Networks</span>
+        </div>
+      </div>
+
+      <div class="project-summary-panel">
+        <div class="summary-card">
+          <div class="summary-label">Period</div>
+          <div class="summary-value">Year 2, Trimester 2, 2026</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-label">Module</div>
+          <div class="summary-value">CSC2106 IoT Protocols and Networks</div>
+          <div class="summary-copy">University coursework focused on distributed wireless communication, fairness under latency, and lightweight network security.</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-label">Prototype</div>
+          <div class="summary-value">5-device ESP32 testbed</div>
+          <div class="summary-copy">One server node coordinated a set of player and relay nodes built on M5Stack / M5Stick-class ESP32 hardware.</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-label">Use Case</div>
+          <div class="summary-value">Fair first-responder detection</div>
+          <div class="summary-copy">The same approach could extend beyond quiz buzzers into other distributed IoT systems that need accurate first-event arbitration.</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="detail-grid">
+      <section class="detail-section">
+        <h2>Problem framing</h2>
+        <ul class="detail-list">
+          <li>Targeted a fairness problem in wireless first-responder systems, where packet arrival order becomes unreliable once congestion, jitter, and relay hops are introduced.</li>
+          <li>Reframed the quiz-buzzer idea as a distributed systems problem rather than a simple input problem, because routing topology and radio behaviour directly affect outcome quality.</li>
+          <li>Set out to guarantee fair winner determination independent of network congestion, routing depth, and packet arrival timing.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Network and routing design</h2>
+        <ul class="detail-list">
+          <li>Used ESP-NOW to support low-latency, connectionless communication between ESP32-based nodes without requiring external infrastructure.</li>
+          <li>Added a simplified AODV-like routing layer so out-of-range players could still participate through intermediate relay nodes.</li>
+          <li>Let the server broadcast authentication and GO packets, while players discovered or refreshed routes using RREQ-style logic and sent PRESS packets back directly or through relays.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Fairness mechanism</h2>
+        <ul class="detail-list">
+          <li>Started each player timer when the GO packet was received locally, then measured elapsed time until the physical button press.</li>
+          <li>Compared <strong>reaction_ms</strong> values at the server instead of using packet arrival order, which decoupled winner selection from network variability.</li>
+          <li>Allowed fairness to hold even when a player depended on a relay path, because the transport delay happened after the local timing decision had already been recorded.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Security and integrity</h2>
+        <ul class="detail-list">
+          <li>Protected unicast communication using ESP-NOW PMK/LMK encryption while keeping the communication path lightweight enough for gameplay timing.</li>
+          <li>Used HMAC-SHA256 packet signing over stable fields so relay nodes could update routing metadata such as hop count and TTL without breaking end-to-end validation.</li>
+          <li>Added replay suppression through a seen table keyed by origin and packet ID, plus protocol-version checks to reject incompatible or duplicated traffic.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Testing outcomes</h2>
+        <ul class="detail-list">
+          <li>The direct-link experiment achieved <strong>100% packet send success</strong>, with only one ACK timeout that recovered automatically through retry.</li>
+          <li>Fairness testing across 19 rounds produced <strong>zero fairness errors</strong>, confirming that the fastest actual player still won when judged from local timing logs.</li>
+          <li>The 1-hop relay test also achieved <strong>100% delivery success</strong>, and although mean round-trip latency increased, the poster and report both note that the added relay forwarding delay itself was only milliseconds and did not change winner correctness.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Performance and constraints</h2>
+        <ul class="detail-list">
+          <li>The poster summary lists direct throughput at <strong>22.2 pkt/s</strong> and relay throughput at <strong>3.8 pkt/s</strong>, which was still enough for the system's short burst-style gameplay traffic.</li>
+          <li>Scalability was constrained by ESP-NOW's encrypted peer limit, which the report notes at around <strong>20 paired peers</strong> in encrypted mode.</li>
+          <li>The design also retained known limitations such as static embedded secrets, lack of server failover, broadcast traffic that is not protected by unicast encryption, and timer precision capped at millisecond resolution.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Why it mattered</h2>
+        <ul class="detail-list">
+          <li>The project showed how fairness in an IoT application can be preserved without global clock synchronization or dependence on receive order.</li>
+          <li>It combined communication, routing, security, and application logic into one coherent prototype rather than treating each concern in isolation.</li>
+          <li>Beyond quizzes, the same timestamp-based arbitration approach could be relevant to industrial trigger systems, classroom response tools, emergency coordination, and other event-driven IoT scenarios.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h2>Tools and concepts</h2>
+        <div class="stack-list">
+          <span class="stack-pill">ESP32</span>
+          <span class="stack-pill">M5Stack / M5Stick</span>
+          <span class="stack-pill">ESP-NOW</span>
+          <span class="stack-pill">AODV-like routing</span>
+          <span class="stack-pill">Arduino IDE</span>
+          <span class="stack-pill">AES-128</span>
+          <span class="stack-pill">HMAC-SHA256</span>
+          <span class="stack-pill">Replay protection</span>
+          <span class="stack-pill">Distributed systems</span>
+          <span class="stack-pill">IoT fairness logic</span>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h2>Project material</h2>
+        <p>This page is based on both the A1 poster and the design review report, especially the problem statement, network design, testing, and results sections.</p>
+        <p><a href="assets/docs/iot-fastreact-poster.pdf" target="_blank" rel="noreferrer">View project poster (PDF)</a></p>
+        <p><a href="assets/docs/iot-fastreact-design-report.pdf" target="_blank" rel="noreferrer">View design report (PDF)</a></p>
+      </section>
+    </div>
+  </div>
+</main>
+
+<script>
+  (function () {
+    const gallery = document.querySelector('[data-gallery]');
+    if (!gallery) return;
+
+    const stageImage = gallery.querySelector('[data-gallery-image]');
+    const caption = gallery.querySelector('[data-gallery-caption]');
+    const thumbnails = Array.from(gallery.querySelectorAll('[data-gallery-thumb]'));
+    const prevButton = gallery.querySelector('[data-gallery-prev]');
+    const nextButton = gallery.querySelector('[data-gallery-next]');
+    let currentIndex = 0;
+
+    function setSlide(index) {
+      currentIndex = (index + thumbnails.length) % thumbnails.length;
+
+      thumbnails.forEach(function (thumb, thumbIndex) {
+        const isActive = thumbIndex === currentIndex;
+        thumb.classList.toggle('is-active', isActive);
+        thumb.setAttribute('aria-pressed', String(isActive));
+      });
+
+      const activeThumb = thumbnails[currentIndex];
+      stageImage.src = activeThumb.dataset.src;
+      stageImage.alt = activeThumb.dataset.alt;
+      if (caption) {
+        caption.textContent = activeThumb.dataset.caption;
+      }
+    }
+
+    thumbnails.forEach(function (thumb, index) {
+      thumb.addEventListener('click', function () {
+        setSlide(index);
+      });
+    });
+
+    prevButton.addEventListener('click', function () {
+      setSlide(currentIndex - 1);
+    });
+
+    nextButton.addEventListener('click', function () {
+      setSlide(currentIndex + 1);
+    });
+  }());
+</script>
+</body>
+</html>
