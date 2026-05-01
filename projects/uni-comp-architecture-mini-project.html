@@ -6,25 +6,25 @@
 <title>Computer Architecture Mini-Project | Projects | Subhashini Rajkumar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/base.css">
-<link rel="stylesheet" href="assets/css/project-detail.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/project-detail.css">
 </head>
 <body>
 <nav>
-  <a class="nav-logo" href="index.html">Subhashini Rajkumar</a>
+  <a class="nav-logo" href="../index.html">Subhashini Rajkumar</a>
   <ul class="nav-tabs">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="skills.html">Skills</a></li>
-    <li><a href="experience.html">Experience</a></li>
-    <li><a href="education.html">Education</a></li>
-    <li><a class="active" href="projects.html">Projects</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../skills.html">Skills</a></li>
+    <li><a href="../experience.html">Experience</a></li>
+    <li><a href="../education.html">Education</a></li>
+    <li><a class="active" href="../projects.html">Projects</a></li>
+    <li><a href="../contact.html">Contact</a></li>
   </ul>
 </nav>
 
 <main class="page page-standalone">
   <div class="inner-page">
-    <a class="back-link" href="projects.html#uni-projects">Back to all projects</a>
+    <a class="back-link" href="../projects.html#uni-projects">Back to all projects</a>
     <div class="section-label">University - SIT &times; University of Glasgow</div>
     <h1 class="section-title">Computer Architecture Mini-Project</h1>
     <p class="project-kicker">A Year 1, Trimester 1 group project for CSC1104 that connected computer architecture theory to practice through direct-mapped cache calculations and a Raspberry Pi tic-tac-toe build that mixed C with ARM64 assembly.</p>
@@ -33,7 +33,7 @@
       <div class="gallery-stage">
         <img
           class="gallery-stage-image"
-          src="assets/images/comp-arc/page47-bitboards.png"
+          src="../assets/images/comp-arc/page47-bitboards.png"
           alt="Report page showing the final bitboard-based tic-tac-toe implementation."
           loading="eager"
           data-gallery-image
@@ -52,11 +52,11 @@
           type="button"
           aria-pressed="true"
           data-gallery-thumb
-          data-src="assets/images/comp-arc/page47-bitboards.png"
+          data-src="../assets/images/comp-arc/page47-bitboards.png"
           data-alt="Report page showing the final bitboard-based tic-tac-toe implementation."
           data-caption="Report excerpt showing the final bitboard representation used to make the tic-tac-toe board more memory efficient."
         >
-          <img src="assets/images/comp-arc/page47-bitboards.png" alt="" loading="lazy">
+          <img src="../assets/images/comp-arc/page47-bitboards.png" alt="" loading="lazy">
           <span class="gallery-thumb-label">Bitboards</span>
         </button>
         <button
@@ -64,11 +64,11 @@
           type="button"
           aria-pressed="false"
           data-gallery-thumb
-          data-src="assets/images/comp-arc/page39-main-loop.png"
+          data-src="../assets/images/comp-arc/page39-main-loop.png"
           data-alt="Report page showing the enum states and main game loop."
           data-caption="Report excerpt highlighting the game states and the switch-based main loop used to control gameplay."
         >
-          <img src="assets/images/comp-arc/page39-main-loop.png" alt="" loading="lazy">
+          <img src="../assets/images/comp-arc/page39-main-loop.png" alt="" loading="lazy">
           <span class="gallery-thumb-label">Game Loop</span>
         </button>
         <button
@@ -76,11 +76,11 @@
           type="button"
           aria-pressed="false"
           data-gallery-thumb
-          data-src="assets/images/comp-arc/page49-empty-cell.png"
+          data-src="../assets/images/comp-arc/page49-empty-cell.png"
           data-alt="Report page showing the initialization and empty-cell logic."
           data-caption="Report excerpt covering the board initialization flow and the bitwise empty-cell check."
         >
-          <img src="assets/images/comp-arc/page49-empty-cell.png" alt="" loading="lazy">
+          <img src="../assets/images/comp-arc/page49-empty-cell.png" alt="" loading="lazy">
           <span class="gallery-thumb-label">Cell Checks</span>
         </button>
         <button
@@ -88,11 +88,11 @@
           type="button"
           aria-pressed="false"
           data-gallery-thumb
-          data-src="assets/images/comp-arc/page54-check-draw.png"
+          data-src="../assets/images/comp-arc/page54-check-draw.png"
           data-alt="Report page showing the draw check and player lookup logic."
           data-caption="Report excerpt showing the draw check and player lookup functions built around bitwise operations."
         >
-          <img src="assets/images/comp-arc/page54-check-draw.png" alt="" loading="lazy">
+          <img src="../assets/images/comp-arc/page54-check-draw.png" alt="" loading="lazy">
           <span class="gallery-thumb-label">Draw Logic</span>
         </button>
       </div>
@@ -185,47 +185,6 @@
   </div>
 </main>
 
-<script>
-  (function () {
-    const gallery = document.querySelector('[data-gallery]');
-    if (!gallery) return;
-
-    const stageImage = gallery.querySelector('[data-gallery-image]');
-    const caption = gallery.querySelector('[data-gallery-caption]');
-    const thumbnails = Array.from(gallery.querySelectorAll('[data-gallery-thumb]'));
-    const prevButton = gallery.querySelector('[data-gallery-prev]');
-    const nextButton = gallery.querySelector('[data-gallery-next]');
-    let currentIndex = 0;
-
-    function setSlide(index) {
-      currentIndex = (index + thumbnails.length) % thumbnails.length;
-
-      thumbnails.forEach(function (thumb, thumbIndex) {
-        const isActive = thumbIndex === currentIndex;
-        thumb.classList.toggle('is-active', isActive);
-        thumb.setAttribute('aria-pressed', String(isActive));
-      });
-
-      const activeThumb = thumbnails[currentIndex];
-      stageImage.src = activeThumb.dataset.src;
-      stageImage.alt = activeThumb.dataset.alt;
-      caption.textContent = activeThumb.dataset.caption;
-    }
-
-    thumbnails.forEach(function (thumb, index) {
-      thumb.addEventListener('click', function () {
-        setSlide(index);
-      });
-    });
-
-    prevButton.addEventListener('click', function () {
-      setSlide(currentIndex - 1);
-    });
-
-    nextButton.addEventListener('click', function () {
-      setSlide(currentIndex + 1);
-    });
-  }());
-</script>
+<script src="../assets/js/project-gallery.js" defer></script>
 </body>
 </html>
